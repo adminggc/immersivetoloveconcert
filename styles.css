@@ -1240,7 +1240,10 @@ button {
     }
 
     .concert-title {
-        font-size: 4rem;
+        font-size: 3.5rem;
+        letter-spacing: 2px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
     .hero-date {
