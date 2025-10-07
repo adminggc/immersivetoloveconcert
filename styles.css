@@ -1,4 +1,15 @@
 /* ================================
+   CUSTOM FONTS
+   ================================ */
+@font-face {
+    font-family: 'SFU Dax Condensed';
+    src: url('fonts/SFUDaxCondensedMedium.TTF') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ================================
    CSS VARIABLES
    ================================ */
 :root {
@@ -17,8 +28,8 @@
     --gradient-gold: linear-gradient(180deg, #d4af76 0%, #c9964d 100%);
 
     /* Typography */
-    --font-primary: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-primary: 'SFU Dax Condensed', 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-display: 'SFU Dax Condensed', 'Cormorant Garamond', Georgia, serif;
 
     /* Spacing */
     --spacing-xs: 0.5rem;
