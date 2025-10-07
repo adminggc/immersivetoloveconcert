@@ -1,0 +1,27 @@
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor directories
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Design files (not needed for website operation)
+Poster_Living heritage_New_0310/
+*.ai
+*.psd
+*.sketch
+
+# Large PNG poster files (use JPG versions instead)
+*.png
+!Ref-website/*.png
+
+# Documentation
+README.md
+
+# Git
+.git/
