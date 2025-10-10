@@ -19,6 +19,34 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Countdown Popup -->
+    <div id="countdown-popup" class="countdown-popup">
+        <div class="countdown-popup-overlay"></div>
+        <div class="countdown-popup-content">
+            <button class="countdown-close" aria-label="Đóng">&times;</button>
+            <h2 class="countdown-title">Chương trình sẽ mở bán vé từ</h2>
+            <p class="countdown-date">00:00 ngày 15.10.2025</p>
+            <div class="countdown-timer">
+                <div class="countdown-item">
+                    <div class="countdown-number" id="days">00</div>
+                    <div class="countdown-label">Ngày</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="hours">00</div>
+                    <div class="countdown-label">Giờ</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="minutes">00</div>
+                    <div class="countdown-label">Phút</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="seconds">00</div>
+                    <div class="countdown-label">Giây</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,6 +194,7 @@
             <div class="artists-grid">
                 <div class="artist-card">
                     <div class="artist-card-image">
+                        <img src="Ref-website/artist_photo/Thanh Lam.JPG" alt="Diva Thanh Lam">
                         <div class="artist-overlay">
                             <p class="artist-bio">Diva Thanh Lam là một trong những giọng ca được yêu thích nhất Việt Nam, nổi tiếng với giọng hát nội lực và những màn trình diễn đầy cảm xúc.</p>
                         </div>
@@ -176,6 +205,7 @@
 
                 <div class="artist-card">
                     <div class="artist-card-image">
+                        <img src="Ref-website/artist_photo/Ha Tran.jpg" alt="Diva Hà Trần">
                         <div class="artist-overlay">
                             <p class="artist-bio">Diva Hà Trần mang đến giọng hát đầy tâm hồn và cách diễn giải jazz đương đại trong sự hợp tác độc đáo này.</p>
                         </div>
@@ -186,6 +216,7 @@
 
                 <div class="artist-card">
                     <div class="artist-card-image">
+                        <img src="Ref-website/artist_photo/Quyen Thien Dac .jpg" alt="Quyền Thiện Đắc">
                         <div class="artist-overlay">
                             <p class="artist-bio">Nghệ sĩ saxophone Quyền Thiện Đắc được biết đến với khả năng chơi đàn giàu cảm xúc và sự đa dạng trong âm nhạc.</p>
                         </div>
@@ -199,14 +230,23 @@
                 <h3 class="directors-title">Ban Sản Xuất</h3>
                 <div class="directors-grid">
                     <div class="director-card">
+                        <div class="director-photo">
+                            <img src="Ref-website/artist_photo/Pham Hoai Nam.jpg" alt="Phạm Hoàng Nam">
+                        </div>
                         <span class="director-role">TỔNG ĐẠO DIỄN</span>
                         <h4>Phạm Hoàng Nam</h4>
                     </div>
                     <div class="director-card">
+                        <div class="director-photo">
+                            <img src="Ref-website/artist_photo/Quoc Trung.jpg" alt="Quốc Trung">
+                        </div>
                         <span class="director-role">GIÁM ĐỐC ÂM NHẠC</span>
                         <h4>Quốc Trung</h4>
                     </div>
                     <div class="director-card">
+                        <div class="director-photo">
+                            <img src="Ref-website/artist_photo/Tom Trandt.jpg" alt="Tom Trandt">
+                        </div>
                         <span class="director-role">THIẾT KẾ TRANG PHỤC</span>
                         <h4>Tom Trandt</h4>
                     </div>
@@ -352,6 +392,19 @@
                 <div class="partner-logo">
                     <img src="Ref-website/logo-moidien.png" alt="MoiDien">
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seat Map Section -->
+    <section class="seat-map">
+        <div class="container">
+            <span class="section-label">SƠ ĐỒ CHỖ NGỒI</span>
+            <h2 class="section-title">Sơ đồ sân khấu & chỗ ngồi</h2>
+            <div class="title-underline center"></div>
+
+            <div class="seat-map-wrapper">
+                <img src="Ref-website/IMTL_SeatMap.jpg" alt="Sơ đồ chỗ ngồi IMMERSED Concert" />
             </div>
         </div>
     </section>

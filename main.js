@@ -459,3 +459,107 @@ document.querySelectorAll('a[target="_blank"]').forEach(link => {
         trackEvent('External Link', 'Click', link.href);
     });
 });
+
+// ================================
+// COUNTDOWN POPUP
+// ================================
+
+(function() {
+    const popup = document.getElementById('countdown-popup');
+    const closeBtn = popup.querySelector('.countdown-close');
+    const overlay = popup.querySelector('.countdown-popup-overlay');
+
+    // Target date: October 15, 2025 at 00:00
+    const targetDate = new Date('2025-10-15T00:00:00').getTime();
+
+    // Check if countdown has ended
+    const now = new Date().getTime();
+    const countdownEnded = now >= targetDate;
+
+    // Check if popup has been shown before
+    const hasShownPopup = sessionStorage.getItem('countdownPopupShown');
+
+    // Only show popup if countdown hasn't ended and hasn't been shown in this session
+    if (!countdownEnded && !hasShownPopup) {
+        setTimeout(() => {
+            popup.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            sessionStorage.setItem('countdownPopupShown', 'true');
+        }, 1000);
+    }
+
+    // Close popup function
+    function closePopup() {
+        popup.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    // Close on button click
+    closeBtn.addEventListener('click', closePopup);
+
+    // Close on overlay click
+    overlay.addEventListener('click', closePopup);
+
+    // Close on ESC key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && popup.classList.contains('active')) {
+            closePopup();
+        }
+    });
+
+    // Countdown timer function
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        // If countdown is over, close popup and don't show again
+        if (distance < 0) {
+            document.getElementById('days').textContent = '00';
+            document.getElementById('hours').textContent = '00';
+            document.getElementById('minutes').textContent = '00';
+            document.getElementById('seconds').textContent = '00';
+
+            // Close popup after countdown ends
+            setTimeout(() => {
+                closePopup();
+            }, 2000);
+            return;
+        }
+
+        // Calculate time units
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Format with leading zeros
+        const formatNumber = (num) => num.toString().padStart(2, '0');
+
+        // Get elements
+        const daysEl = document.getElementById('days');
+        const hoursEl = document.getElementById('hours');
+        const minutesEl = document.getElementById('minutes');
+        const secondsEl = document.getElementById('seconds');
+
+        // Update with flip animation
+        function updateWithFlip(element, value) {
+            const formattedValue = formatNumber(value);
+            if (element.textContent !== formattedValue) {
+                element.classList.add('flip');
+                element.textContent = formattedValue;
+                setTimeout(() => {
+                    element.classList.remove('flip');
+                }, 600);
+            }
+        }
+
+        updateWithFlip(daysEl, days);
+        updateWithFlip(hoursEl, hours);
+        updateWithFlip(minutesEl, minutes);
+        updateWithFlip(secondsEl, seconds);
+    }
+
+    // Update countdown every second
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+})();

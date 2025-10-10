@@ -19,6 +19,34 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Countdown Popup -->
+    <div id="countdown-popup" class="countdown-popup">
+        <div class="countdown-popup-overlay"></div>
+        <div class="countdown-popup-content">
+            <button class="countdown-close" aria-label="Close">&times;</button>
+            <h2 class="countdown-title">Ticket Sales Open From</h2>
+            <p class="countdown-date">00:00 October 15, 2025</p>
+            <div class="countdown-timer">
+                <div class="countdown-item">
+                    <div class="countdown-number" id="days">00</div>
+                    <div class="countdown-label">Days</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="hours">00</div>
+                    <div class="countdown-label">Hours</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="minutes">00</div>
+                    <div class="countdown-label">Minutes</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="seconds">00</div>
+                    <div class="countdown-label">Seconds</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -166,6 +194,7 @@
             <div class="artists-grid">
                 <div class="artist-card">
                     <div class="artist-card-image">
+                        <img src="Ref-website/artist_photo/Thanh Lam.JPG" alt="Diva Thanh Lam">
                         <div class="artist-overlay">
                             <p class="artist-bio">Diva Thanh Lam is one of Vietnam's most celebrated vocalists, known for her powerful voice and emotional performances.</p>
                         </div>
@@ -176,6 +205,7 @@
 
                 <div class="artist-card">
                     <div class="artist-card-image">
+                        <img src="Ref-website/artist_photo/Ha Tran.jpg" alt="Diva Hà Trần">
                         <div class="artist-overlay">
                             <p class="artist-bio">Diva Hà Trần brings her soulful voice and contemporary jazz interpretation to this unique collaboration.</p>
                         </div>
@@ -186,6 +216,7 @@
 
                 <div class="artist-card">
                     <div class="artist-card-image">
+                        <img src="Ref-website/artist_photo/Quyen Thien Dac .jpg" alt="Quyền Thiện Đắc">
                         <div class="artist-overlay">
                             <p class="artist-bio">Master saxophonist Quyền Thiện Đắc is renowned for his expressive playing and musical versatility.</p>
                         </div>
@@ -199,14 +230,23 @@
                 <h3 class="directors-title">Production Team</h3>
                 <div class="directors-grid">
                     <div class="director-card">
+                        <div class="director-photo">
+                            <img src="Ref-website/artist_photo/Pham Hoai Nam.jpg" alt="Phạm Hoàng Nam">
+                        </div>
                         <span class="director-role">SHOW DIRECTOR</span>
                         <h4>Phạm Hoàng Nam</h4>
                     </div>
                     <div class="director-card">
+                        <div class="director-photo">
+                            <img src="Ref-website/artist_photo/Quoc Trung.jpg" alt="Quốc Trung">
+                        </div>
                         <span class="director-role">MUSIC DIRECTOR</span>
                         <h4>Quốc Trung</h4>
                     </div>
                     <div class="director-card">
+                        <div class="director-photo">
+                            <img src="Ref-website/artist_photo/Tom Trandt.jpg" alt="Tom Trandt">
+                        </div>
                         <span class="director-role">COSTUME DESIGNER</span>
                         <h4>Tom Trandt</h4>
                     </div>
@@ -352,6 +392,19 @@
                 <div class="partner-logo">
                     <img src="Ref-website/logo-moidien.png" alt="MoiDien">
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seat Map Section -->
+    <section class="seat-map">
+        <div class="container">
+            <span class="section-label">SEATING CHART</span>
+            <h2 class="section-title">Stage & Seating Map</h2>
+            <div class="title-underline center"></div>
+
+            <div class="seat-map-wrapper">
+                <img src="Ref-website/IMTL_SeatMap.jpg" alt="IMMERSED Concert Seating Map" />
             </div>
         </div>
     </section>
